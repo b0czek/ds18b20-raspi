@@ -1,11 +1,13 @@
-# ds18b20-raspi
+# ds18b20-raspi-typed
+
+Forked library from [thisdavej/ds18b20-raspi](https://github.com/thisdavej/ds18b20-raspi) but with type declarations included.
 
 Get temperature readings from a [DS18B20](https://www.maximintegrated.com/en/products/analog/sensors-and-sensor-interface/DS18B20.html) 1-Wire sensor connected to a Raspberry Pi.
 
 ## Noteworthy Features
 
 - Includes `readSimpleC` (degC) and `readSimpleF` (degF) functions to make it simple to read temperatures if only a single 1-Wire sensor is present. No need to supply the 1-Wire deviceId as a parameter.
-- Both asynchronous and synchronous versions provided.  Invoke the synchronous version of a given function by simply not providing a callback function.
+- Both asynchronous and synchronous versions provided. Invoke the synchronous version of a given function by simply not providing a callback function.
 - Built-in CLI (see documentation at the end of this page) for easy reading of temperatures from the command-line with an extensive set of options.
 
 ## Install
@@ -14,13 +16,11 @@ Get temperature readings from a [DS18B20](https://www.maximintegrated.com/en/pro
 $ npm install --save ds18b20-raspi
 ```
 
-
 ## Usage/API
 
 ```js
-const sensor = require('ds18b20-raspi');
+const sensor = require("ds18b20-raspi");
 ```
-
 
 ### readSimpleC([decimals], [callback(error, reading)])
 
@@ -34,13 +34,12 @@ console.log(`${tempC} degC`);
 const tempC = sensor.readSimpleC(1);
 console.log(`${tempC} degC`);
 
-
 // async version
 sensor.readSimpleC((err, temp) => {
 	if (err) {
 		console.log(err);
 	} else {
-	console.log(`${temp} degC`);
+		console.log(`${temp} degC`);
 	}
 });
 
@@ -49,11 +48,10 @@ sensor.readSimpleC(1, (err, temp) => {
 	if (err) {
 		console.log(err);
 	} else {
-	console.log(`${temp} degC`);
+		console.log(`${temp} degC`);
 	}
 });
 ```
-
 
 ### readSimpleF([decimals], [callback(error, reading)])
 
@@ -65,7 +63,6 @@ console.log(`${tempF} degF`);
 ```
 
 See other `readSimpleC` examples above and change `readSimpleC` to `readSimpleF`.
-
 
 ### readAllC([decimals], [callback(error, readings)])
 
@@ -98,7 +95,6 @@ sensor.readAllC(2, (err, temps) => {
 });
 ```
 
-
 ### readAllF([decimals], [callback(error, readings)])
 
 Get readings (degF) of all temperature sensors found
@@ -110,24 +106,22 @@ console.log(temps);
 
 See other `readAllC` examples above and change `readAllC` to `readAllF`.
 
-
 ### readC(deviceId, [decimals], [callback(error, readings)])
 
 Get temperature reading (degC) for a specific 1-Wire device id
 
 ```js
-const deviceId = '28-051724b238ff';
+const deviceId = "28-051724b238ff";
 const temp = sensor.readC(deviceId);
 console.log(temp);
 
 // round temperature readings to 2 digits
-const deviceId = '28-051724b238ff';
+const deviceId = "28-051724b238ff";
 const temp = sensor.readC(deviceId, 2);
 console.log(temp);
 
-
 // async version
-const deviceId = '28-051724b238ff';
+const deviceId = "28-051724b238ff";
 sensor.readC(deviceId, (err, temp) => {
 	if (err) {
 		console.log(err);
@@ -137,7 +131,7 @@ sensor.readC(deviceId, (err, temp) => {
 });
 
 // round temperature readings to 2 digits
-const deviceId = '28-051724b238ff';
+const deviceId = "28-051724b238ff";
 sensor.readC(deviceId, 2, (err, temp) => {
 	if (err) {
 		console.log(err);
@@ -147,19 +141,17 @@ sensor.readC(deviceId, 2, (err, temp) => {
 });
 ```
 
-
 ### readF(deviceId, [decimals], [callback(error, readings)])
 
 Get temperature reading (degF) for a specific 1-Wire device id
 
 ```js
-const deviceId = '28-051724b238ff';
+const deviceId = "28-051724b238ff";
 const temp = sensor.readF(deviceId);
 console.log(temp);
 ```
 
 See other `readC` examples above and change `readC` to `readF`.
-
 
 ### list([callback(error, deviceIds)])
 

@@ -1,5 +1,5 @@
 {
-  "name": "ds18b20-raspi",
+  "name": "ds18b20-raspi-typed",
   "version": "0.3.6",
   "description": "Get temperature readings from a DS18B20 1-Wire sensor connected to a Raspberry Pi",
   "license": "MIT",
