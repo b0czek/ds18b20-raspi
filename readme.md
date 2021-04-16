@@ -13,13 +13,19 @@ Get temperature readings from a [DS18B20](https://www.maximintegrated.com/en/pro
 ## Install
 
 ```
-$ npm install --save ds18b20-raspi
+$ npm install --save ds18b20-raspi-typescript
 ```
 
 ## Usage/API
 
 ```js
-const sensor = require("ds18b20-raspi");
+const sensor = require("ds18b20-raspi-typescript");
+```
+
+or
+
+```ts
+import sensor from "ds18b20-raspi-typescript";
 ```
 
 ### readSimpleC([decimals], [callback(error, reading)])
