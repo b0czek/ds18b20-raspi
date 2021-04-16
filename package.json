@@ -1,14 +1,13 @@
 {
-  "name": "ds18b20-raspi-typed",
+  "name": "ds18b20-raspi-typescript",
   "version": "0.3.6",
   "description": "Get temperature readings from a DS18B20 1-Wire sensor connected to a Raspberry Pi",
   "license": "MIT",
-  "repository": "b0czek/ds18b20-raspi",
-  "author": {
-    "name": "Dariusz Majnert",
-    "email": "dariusz.majnert@gmail.com",
-    "url": "https://github.com/b0czek/ds18b20-raspi-typed"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/b0czek/ds18b20-raspi-typescript.git"
   },
+  "author": "Dariusz Majnert <dariusz.majnert@gmail.com> (https://github.com/b0czek/ds18b20-raspi-typescript)",
   "bin": {
     "ds18b20": "cli.js"
   },
@@ -41,5 +40,13 @@
   },
   "devDependencies": {
     "tap": "^14.11.0"
+  },
+  "bugs": {
+    "url": "https://github.com/b0czek/ds18b20-raspi-typescript/issues"
+  },
+  "homepage": "https://github.com/b0czek/ds18b20-raspi-typescript#readme",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
   }
 }
