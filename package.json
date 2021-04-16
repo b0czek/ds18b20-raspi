@@ -1,6 +1,6 @@
 {
   "name": "ds18b20-raspi-typescript",
-  "version": "0.3.6",
+  "version": "0.3.7",
   "description": "Get temperature readings from a DS18B20 1-Wire sensor connected to a Raspberry Pi",
   "license": "MIT",
   "repository": {
