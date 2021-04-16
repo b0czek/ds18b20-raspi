@@ -3,11 +3,11 @@
   "version": "0.3.6",
   "description": "Get temperature readings from a DS18B20 1-Wire sensor connected to a Raspberry Pi",
   "license": "MIT",
-  "repository": "thisdavej/ds18b20-raspi",
+  "repository": "b0czek/ds18b20-raspi",
   "author": {
-    "name": "Dave Johnson",
-    "email": "thisdavej@gmail.com",
-    "url": "thisdavej.com"
+    "name": "Dariusz Majnert",
+    "email": "dariusz.majnert@gmail.com",
+    "url": "https://github.com/b0czek/ds18b20-raspi-typed"
   },
   "bin": {
     "ds18b20": "cli.js"
